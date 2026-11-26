@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prato da Cidade</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header id="cabecalho" class="cabecalho">
+        <h1>🍕 🍩 Prato da Cidade 🍣 🍔</h1>
+
+        <!-- Aparece apenas quando a cidade está entre as 10 cadastradas -->
+        <div id="infoCidade" class="info-cidade" hidden>
+            <h2 id="tituloCidade"></h2>
+            <p id="descricaoCidade"></p>
+            <p class="pratos-tipicos"><strong>Pratos típicos:</strong> <span id="pratosCidade"></span></p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Texto de apresentação e busca, lado a lado -->
+        <div class="topo-pagina">
+            <div class="caixa">
+                <h2>Sem ideia de onde comer?</h2>
+                <p>No Prato da Cidade você escolhe uma cidade e descobre restaurantes, cafés e lanchonetes para todos os gostos.</p>
+                <p>Filtre pelo tipo de comida, encontre o lugar no mapa e, nas cidades em destaque, veja também a faixa de preço, a nota e os diferenciais de cada restaurante.</p>
+                <h3>O que você encontra no site</h3>
+                <ul>
+                    <li>Restaurantes, cafés e lanchonetes de qualquer cidade, em poucos segundos</li>
+                    <li>Filtro por nome, tipo de lugar e tipo de comida</li>
+                    <li>Link direto para ver o endereço no mapa</li>
+                    <li>Páginas personalizadas com a identidade e a culinária de cidades selecionadas</li>
+                </ul>
+            </div>
+
+            <form id="formbusca" class="caixa">
+                <label for="cidade">Para qual cidade nós vamos?</label>
+                <input type="text" id="cidade" placeholder="Ex.: Juiz de Fora" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <p id="mensagem"></p>
+
+        <!-- Carrossel -->
+        <section>
+            <h2 id="tituloCarrossel">Destaques</h2>
+            <button id="btnAnterior">&lt;</button>
+            <button id="btnProximo">&gt;</button>
+            <ul id="carrossel"></ul>
+        </section>
+
+        <!-- Resultado da busca: nossas escolhas -->
+        <section id="secCuradoria" hidden>
+            <h2>Nossas escolhas em <span id="nomeCidade"></span></h2>
+            <label for="filtroPreco">Faixa de preço</label>
+            <select id="filtroPreco">
+                <option value="">Todas</option>
+                <option value="1">R$ (mais barato)</option>
+                <option value="2">R$$</option>
+                <option value="3">R$$$</option>
+            </select>
+            <ul id="listaCuradoria" class="lista"></ul>
+        </section>
+
+        <!-- Resultado da busca: todos os lugares -->
+        <section id="secTodos" hidden>
+            <h2>Todos os lugares cadastrados</h2>
+
+            <div class="filtros">
+                <div>
+                    <label for="filtroNome">Nome</label>
+                    <input type="text" id="filtroNome" placeholder="Buscar pelo nome">
+                </div>
+                <div>
+                    <label for="filtroTipo">Tipo</label>
+                    <select id="filtroTipo">
+                        <option value="">Todos</option>
+                        <option value="restaurant">Restaurante</option>
+                        <option value="cafe">Café</option>
+                        <option value="fast_food">Lanchonete</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="filtroCozinha">Tipo de comida</label>
+                    <select id="filtroCozinha">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="contagem"></p>
+            <ul id="listaTodos" class="lista"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Dados dos lugares: © colaboradores do OpenStreetMap (licença ODbL). Projeto acadêmico.</p>
+    </footer>
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

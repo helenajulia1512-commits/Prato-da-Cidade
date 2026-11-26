@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffdf9;
+    color: #333333;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Cabeçalho vermelho padrão */
+.cabecalho {
+    background-color: #a32d2d;
+    color: white;
+    text-align: center;
+    padding: 40px 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Quando o cabeçalho ganha a foto da cidade */
+.cabecalho.cabecalho-personalizado {
+    padding: 55px 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.info-cidade {
+    max-width: 750px;
+    margin: 20px auto 0 auto;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.info-cidade h2 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+}
+
+.info-cidade p {
+    margin: 6px 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.pratos-tipicos {
+    color: #ffe082;
+}
+
+/* Destaque nos títulos de seção quando há foto no fundo da página */
+body.pagina-personalizada main > section > h2,
+body.pagina-personalizada #mensagem,
+body.pagina-personalizada #contagem {
+    background-color: rgba(255, 253, 249, 0.92);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+body.pagina-personalizada .filtros {
+    background-color: rgba(255, 253, 249, 0.95);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Texto e busca lado a lado */
+.topo-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.caixa {
+    flex: 1;
+    min-width: 280px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.caixa h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+input, select, button {
+    font-size: 16px;
+    padding: 8px;
+}
+
+button {
+    background-color: #2f6b3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cidade {
+    width: 65%;
+}
+
+#mensagem {
+    color: #666666;
+}
+
+/* Carrossel */
+#carrossel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    list-style: none;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.cartao {
+    min-width: 230px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.cartao h3 {
+    margin: 5px 0;
+}
+
+.cartao p {
+    margin: 4px 0;
+}
+
+.emoji {
+    font-size: 40px;
+    text-align: center;
+    background-color: #f5e9d8;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Listas de resultados */
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.lista h3 {
+    margin: 0 0 5px 0;
+}
+
+.lista p {
+    margin: 3px 0;
+}
+
+.preco {
+    color: #c4501b;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #666666;
+    background-color: rgba(255, 253, 249, 0.94);
+    border-top: 1px solid #dddddd;
+    padding: 15px;
+}
